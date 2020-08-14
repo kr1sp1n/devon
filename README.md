@@ -14,6 +14,8 @@ deno run -A --unstable --quiet src/index.js
 
 ## current commands
 
+* add -> `add ls http://localhost:5000/src/commands/ls.js`: load command with own alias from URL
+* cat
 * curl -> `curl https://example.com`
 * exit
 * gemini -> `gemini gemini.circumlunar.space`

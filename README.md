@@ -7,6 +7,8 @@ I try to use only runtime API and standard library. No third party modules.
 ## run
 
 ```bash
+git clone git@github.com:kr1sp1n/devon.git
+cd devon
 deno run -A --unstable --quiet src/index.js
 ```
 
@@ -19,9 +21,3 @@ deno run -A --unstable --quiet src/index.js
 * mkdir
 * pwd
 * touch
-
-## install as executable
-
-```bash
-deno install -A --unstable -q -n devon https://raw.githubusercontent.com/kr1sp1n/devon/master/bundle.js
-```

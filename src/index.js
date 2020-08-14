@@ -1,5 +1,3 @@
-import pwd from "./commands/pwd.js";
-import gemini from "./commands/gemini.js";
 import { exists, path } from "./deps.js";
 
 const __dirname = path.dirname(path.fromFileUrl(import.meta.url));

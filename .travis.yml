@@ -1,4 +1,7 @@
+language: minimal
+dist: focal
 services:
   - docker
 script:
+  # Run tests inside docker build:
   - docker build -t kr1sp1n/devon .

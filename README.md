@@ -1,5 +1,7 @@
 # devon
-deno as cross-plattform OS
+[![Build Status](https://travis-ci.com/kr1sp1n/devon.svg?branch=master)](https://travis-ci.com/kr1sp1n/devon)
+
+deno as cross-plattform shell
 
 The idea is to have most of the busybox commands in some kind of shell inside deno runtime.
 I try to use only runtime API and standard library. No third party modules.

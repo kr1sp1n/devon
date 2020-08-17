@@ -38,3 +38,15 @@ deno install -A --unstable -n devon -f -q https://raw.githubusercontent.com/kr1s
 ```bash
 deno test --unstable -A
 ```
+
+## build docker image
+
+```bash
+docker build -t kr1sp1n/devon .
+```
+
+## run with docker
+
+```bash
+docker run -it --rm kr1sp1n/devon
+```

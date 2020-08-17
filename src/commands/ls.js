@@ -16,6 +16,6 @@ export default function (stdin, stdout, stderr) {
       }
       // console.log(entry);
     }
-    stdout.write(new TextEncoder().encode(result.join("\n")));
+    stdout.write(new TextEncoder().encode(result.sort().join("\n")));
   };
 }

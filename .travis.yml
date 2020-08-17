@@ -1,0 +1,4 @@
+services:
+  - docker
+script:
+  - docker build -t kr1sp1n/devon .

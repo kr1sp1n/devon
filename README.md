@@ -22,10 +22,19 @@ deno install -A --unstable -n devon -f -q https://raw.githubusercontent.com/kr1s
 
 * `add` - load command with own alias from URL -> `add ls http://localhost:5000/src/commands/ls.js`
 * `cat`
+* `cd`
 * `curl` - simple http client -> `curl https://example.com`
+* `env`
 * `exit`
 * `gemini` - a simple gemini client -> `gemini gemini.circumlunar.space`
+* `grep`
 * `ls`
 * `mkdir` - the default is with `-p`
 * `pwd`
 * `touch`
+
+## run tests
+
+```bash
+deno test --unstable -A
+```

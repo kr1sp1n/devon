@@ -1,3 +1,5 @@
-export default function (path) {
-  return Deno.mkdir(path, { recursive: true });
+export default function (stdin, stdout, stderr) {
+  return (path) => {
+    Deno.mkdir(path, { recursive: true });
+  };
 }

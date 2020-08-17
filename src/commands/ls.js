@@ -1,20 +1,21 @@
 import { fs, path as p } from "../deps.js";
 
-export default async function (path = ".") {
-  // console.log(p.basename(path))
-  const options = {
-    maxDepth: 1,
-  };
-  const result = [];
-  for await (const entry of fs.walk(path, options)) {
-    if (
-      entry.name !== ".." &&
-      p.basename(path) !== entry.name
-    ) {
-      result.push(entry.name);
+export default function (stdin, stdout, stderr) {
+  return async (path = ".") => {
+    const options = {
+      maxDepth: 1,
+    };
+    const result = [];
+    if (path.startsWith("~")) path = path.replace("~", Deno.env.get("HOME"));
+    for await (const entry of fs.walk(path, options)) {
+      if (
+        entry.name !== ".." &&
+        p.basename(path) !== entry.name
+      ) {
+        result.push(entry.name);
+      }
+      // console.log(entry);
     }
-    // console.log(entry);
-  }
-  if (result.length === 0) return;
-  return result.join("\n");
+    stdout.write(new TextEncoder().encode(result.join("\n")));
+  };
 }
